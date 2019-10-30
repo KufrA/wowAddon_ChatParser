@@ -6,6 +6,8 @@
 ## X-Category: Interface Enhancements
 ## X-LoadOn-Slash: /chatparser
 
-eventhandler.lua
+object\list.lua
+handlers\messagehandler.lua
+handlers\eventhandler.lua
 ui\parserframe.lua
 core.lua
