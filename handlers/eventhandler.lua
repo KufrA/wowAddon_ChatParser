@@ -17,12 +17,5 @@ function EventHandler:Unregister()
 end
 
 function onMessageReceived(self, event, ...)
-	local message = select(1, ...);
-	local channel = select(9, ...);
-	local test = List.new();
-	List.PushRight(test, "asdsa")
-	print(List.PopRight(test))
-	if channel == "LookingForGroup" then 
-		print(message .. channel);
-	end
+	workspace.MessageHandler:ParseMessage(...);
 end
