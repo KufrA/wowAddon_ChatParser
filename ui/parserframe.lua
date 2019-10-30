@@ -6,7 +6,7 @@ local ParserFrame = workspace.ParserFrame;
 
 -- Construct the frame
 function ParserFrame:WindowCreate()
-	local UImain = CreateFrame("Frame", "ChatParser_Frame", UIParent, "UIPanelDialogTemplate")
+	local UImain = CreateFrame("Frame", "ChatParserFrame", UIParent, "UIPanelDialogTemplate")
 	local texture = UImain:CreateTexture(nil, "BACKGROUND");
 	UImain:SetSize(400, 400);
 	UImain:SetMovable(true);
@@ -14,11 +14,11 @@ function ParserFrame:WindowCreate()
 	UImain:RegisterForDrag("LeftButton")
 	UImain:SetScript("OnDragStart", UImain.StartMoving)
 	UImain:SetScript("OnDragStop", UImain.StopMovingOrSizing)
-	UImain:SetPoint("CENTER", UIParent, "CENTER");
-	UImain.title = UImain:CreateFontString(nil, "OVERLAY");
-	UImain.title:SetFontObject("GameFontHighlight");
-	UImain.title:SetPoint("LEFT", UImain.TitleBg, "LEFT", 5, 0);
-	UImain.title:SetText("Text Parser");
+	UImain:SetPoint("LEFT", UIParent, "LEFT");
+	UImain.Title:ClearAllPoints();
+	UImain.Title:SetFontObject("GameFontHighlight")
+	UImain.Title:SetPoint("LEFT", ChatParserFrameTitleBG, "LEFT", 5, 0);
+	UImain.Title:SetText("Chat Parser");
 
 	--local UIConfig = CreateFrame("Frame", ["ChatParser_ConfigFrame"], UImain)
 
@@ -30,7 +30,11 @@ function ParserFrame:WindowShow()
 
 end
 
-function ParserFrame:WIndowHide()
+function ParserFrame:WindowHide()
+
+end
+
+function ParserFrame:AddMessage()
 
 end
 
