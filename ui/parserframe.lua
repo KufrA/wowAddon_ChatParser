@@ -22,8 +22,15 @@ function ParserFrame:WindowCreate()
 
 	--local UIConfig = CreateFrame("Frame", ["ChatParser_ConfigFrame"], UImain)
 
+	UImain.MessageFrame = CreateFrame("ScrollFrame", nil, UImain, "UIPanelScrollFrameTemplate")
+	UImain.MessageFrame:SetPoint("TOPLEFT", ChatParserFrameDialogBG, "TOPLEFT", 4, -8);
+	UImain.MessageFrame:SetPoint("BOTTOMRIGHT", ChatParserFrameDialogBG, "BOTTOMRIGHT", -3, 4);
 
-	--local UImessages = CreateFrame("messageFrame", ["ChatParser_MessageFrame"], UImain)
+	local child = CreateFrame("Frame", nil, UImain.MessageFrame);
+	child:SetSize(358,800);
+	UImain.MessageFrame:SetScrollChild(child);
+
+	
 end
 
 function ParserFrame:WindowShow()
