@@ -20,14 +20,14 @@ function ParserFrame:WindowCreate()
 	UImain.title:SetPoint("LEFT", UImain.TitleBg, "LEFT", 5, 0);
 	UImain.title:SetText("Text Parser");
 
-	local UIConfig = CreateFrame("Frame", ["ChatParser_ConfigFrame"], UImain)
+	--local UIConfig = CreateFrame("Frame", ["ChatParser_ConfigFrame"], UImain)
 
 
-	local UImessages = CreateFrame("messageFrame", ["ChatParser_MessageFrame"], UImain)
+	--local UImessages = CreateFrame("messageFrame", ["ChatParser_MessageFrame"], UImain)
 end
 
 function ParserFrame:WindowShow()
-	
+
 end
 
 function ParserFrame:WIndowHide()
