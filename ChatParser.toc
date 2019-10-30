@@ -1,0 +1,10 @@
+## Interface: 11302
+## Title: ChatParser
+## Name: Chat Parser
+## Notes: Text parser for filtering chat messsages
+## Version: v1
+## X-Category: Interface Enhancements
+## X-LoadOn-Slash: /chatparser
+
+core.lua
+ui\parserframe.lua
